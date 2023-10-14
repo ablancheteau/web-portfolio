@@ -18,65 +18,30 @@ INDEX
 
 /**** HEADER ****/
 
-header {
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-color{
     background-color: #191919;
-    padding-right: 7.5rem;
-    padding-left: 7.5rem;
 }
 
-.header-logo {
-    display: inline-block;
-    height: 2.8125rem;
-    width: auto;
-    vertical-align: middle;
+.navbar-brand img{
+    height: 3rem;
+}
+.navbar-nav{
+    row-gap: 1.5rem;
 }
 
-.header-logo img{
-    display: block;
-    width: auto;
-    height: 100%;
+.navbar-collapse{
+    flex-grow: 0;
 }
 
-.header-navbar-ul {
-    display: flex;
-    gap: 2.5rem;
-    list-style-type: none;
-}
-
-.header-navbar-ul li a {
-    color: #eeeeee;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-weight: 400;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    text-transform: uppercase;
-    padding: .75rem .75rem;
-}
-.header-navbar-ul li a:hover{
-    border: solid;
-    border-color: white;
-    transition: .1s;
-    border-radius: .375rem;
-}
 
 .header-social {
     display:flex;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
     gap: .75rem;
     font-family: 'IBM Plex Sans', sans-serif;
     color: #eeeeee;
     font-size: .875rem;
-}
-
-.header-social p{
-    text-align: center;
 }
 
 /**** MAIN ****/
@@ -97,6 +62,8 @@ header {
 .index-header-section h1{
     font-size: 4rem;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-style: italic;
     align-self: center;
     justify-self: center;
 }
@@ -157,11 +124,15 @@ header {
 
 .card-container, .testimony-container{
     display: flex;
-    width: 100%;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: space-evenly;
+    align-items: center;
 }
+.testimony-container{
+    gap: 0px;
+}
+
 .index-projects-section h2, .index-testimonial-section h2, .index-mailing-section h2{
     padding: 4.375rem 0rem;
     font-size: 2rem;
@@ -176,54 +147,29 @@ header {
     background-color: whitesmoke;
 }
 
-.card{
-    width: 28.125rem;
-    height: 31.25rem;
-    margin: .75rem;
-    background-color: whitesmoke;
-    border-radius: .75rem;
-    overflow: hidden;
-}
 
-.card div {
-    width: 100%;
-    height: 15.625rem;
-}
-
-.card div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card h3{
-    padding: 1.5rem 1.5rem .375rem 1.5rem;
-    letter-spacing: .0313rem;
-}
-
-.card p{
-    padding: 0rem 1.5rem 1.5rem 1.5rem;
-    font-size: .875rem;
-    letter-spacing: .0313rem;
-}
-
-.card button{
-    display: flex;
-    justify-content: flex-end;
-    margin: 0rem 1.5rem;
+.my-button {
+    text-decoration: none;
     background-color: #8000FF;
-    border-radius: 12px;
-    padding: .5rem 1.75rem;
-    border-width: 0rem;
-    color: white;
-    font-weight: 600;
-    font-size: .875rem;
+    color: #eeeeee;
+    border: 1px;
+    padding: .375rem .75rem ;
+    border-radius: .375rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.card button a{
-    color: white;
-    text-decoration: none;  
+.my-button:hover {
+    background-color: #5500ab;
 }
+
+.my-button:active {
+    background-color: #300758;
+}
+
 .index-testimonial-section h2{
     padding: 4.375rem 0rem 0rem 0rem;
 }
@@ -459,6 +405,7 @@ ABOUT
 WORK & PLAY
 ****************************/
 .work-principal{
+    margin-top: 5.625rem;
     padding: 1.5rem 7.5rem;
 }
 .work-principal div h1{
@@ -474,7 +421,7 @@ WORK & PLAY
     letter-spacing: .0313rem;
 }
 
-.play-principal h2{
+.play-principal h2, .work-principal h2{
     padding: 1.5rem 0rem;
     font-size: 1.5rem;
     font-style: normal;
@@ -680,7 +627,9 @@ MEDIA QUERY
     .index-projects-section h2, .index-testimonial-section h2, .index-mailing-section h2{
         padding: 2.1875rem 0rem .375rem 0rem;
     }
-    
+    .card-container{
+        padding: 0rem;
+    }
     .index-mailing-section {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: 1;
@@ -713,7 +662,7 @@ MEDIA QUERY
     }
     /* WORK & PLAY */
 
-    .work-principal, .card-container, .play-principal{
+    .work-principal, .play-principal{
         padding: 2.1875rem 3.75rem;
     }
 
@@ -722,7 +671,7 @@ MEDIA QUERY
 @media (max-width:425px){
 
         /* HOME */
-    
+
     .index-header-section h1{
         font-size: 3.5rem;
     }
