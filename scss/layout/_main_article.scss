@@ -1,0 +1,35 @@
+.article-principal{
+    padding: 7.5rem 7.5rem 7.5rem 7.5rem;
+    h1{
+        @include h1 (2.875rem, italic, 700);
+        font-family: $ffamily;
+        text-align: right;
+    }
+    h2{
+        @extend h1;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: left !important;
+    }
+    .example-img{
+        padding: 1.5rem 0rem;
+        display: flex;
+        flex-direction: row;
+        div{
+            width: 50%;
+        }
+    }
+    h3{
+        margin: 2rem 0rem;
+        @include h3 (1.5rem, italic, 700);
+        font-family: $ffamily;
+        background-color: map-get($color, _yellow);
+        width: fit-content;
+    }
+    .img-hori{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        margin: 1.5rem 0rem;
+    }
+}

@@ -1,228 +1,204 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+body {
+  font-family: 'IBM Plex Sans', sans-serif; }
 
-body{
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-/* font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'IBM Plex Sans Condensed', sans-serif; */
-
-/****************************
-INDEX 
-****************************/
-
-/**** HEADER ****/
-
-.nav-color{
-    background-color: #191919;
-}
-
-.navbar-brand img{
-    height: 3rem;
-}
-.navbar-nav{
-    row-gap: 1.5rem;
-}
-
-.navbar-collapse{
-    flex-grow: 0;
-}
-
-
-.header-social {
-    display:flex;
+nav {
+  background-color: #191919;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  text-transform: uppercase; }
+  nav div a img {
+    height: 3rem; }
+  nav div div {
+    flex-grow: 0; }
+    nav div div ul {
+      row-gap: 1.5rem; }
+  nav div .header-social {
+    display: flex;
     justify-content: left;
     align-content: center;
     gap: .75rem;
     font-family: 'IBM Plex Sans', sans-serif;
     color: #eeeeee;
-    font-size: .875rem;
-}
+    font-size: .875rem; }
+    nav div .header-social img {
+      height: 2rem; }
 
-/**** MAIN ****/
-
-.index-header-section{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    height: 43.75rem;
-    overflow: hidden;
-    color: white;
-    background-image: url("../assets/img/banner_hero.jpg");
-    width: 100%;
-    background-size: cover;
-}
-
-.index-header-section h1{
+.index-header-section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 43.75rem;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+  background-size: cover;
+  background: linear-gradient(-45deg, #0CB800, #8000FF, #0CB800, #E67903);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; }
+  .index-header-section h1, .index-header-section .article-principal h2, .article-principal .index-header-section h2 {
     font-size: 4rem;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    font-weight: 700;
     font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
     align-self: center;
     justify-self: center;
-}
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    letter-spacing: normal;
+    opacity: 1; } }
+
 .index-about-section {
-    display: grid;
-    grid-template-rows: repeat(2,auto);
-    row-gap: 1.125rem;
-    column-gap: 1.75rem;
-    background-color: whitesmoke;
-    align-self: flex-start;
-    padding: 4.375rem 7.5rem;
-    height: auto;
-    grid-template-areas: 
-    "item1 item2 item2"
-    "item1 item3 item3";
-}
-.item1{
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 1.125rem;
+  column-gap: 1.75rem;
+  background-color: whitesmoke;
+  align-self: flex-start;
+  padding: 3.5rem 7.5rem;
+  height: auto;
+  grid-template-areas: "item1 item2 item2" "item1 item3 item3"; }
+  .index-about-section img {
     grid-area: item1;
     max-height: 12.5rem;
-    background: radial-gradient(#bb78ff,#8000FF);
+    background: radial-gradient(#bb78ff, #8000FF);
     border-radius: 50%;
-    align-self: flex-start;
-}
-.item2{
-    grid-area: item2;
-}
-.item3{
+    align-self: flex-start; }
+  .index-about-section .item2 {
+    grid-area: item2; }
+    .index-about-section .item2 h2 {
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: 700;
+      font-family: "IBM Plex Sans Condensed", sans-serif; }
+    .index-about-section .item2 h3 {
+      font-size: 1.75rem;
+      font-style: italic;
+      font-weight: 400;
+      background-color: #F9D61C;
+      width: fit-content; }
+  .index-about-section .item3 {
     grid-area: item3;
-    align-self: flex-start;
-}
+    align-self: flex-start; }
+    .index-about-section .item3 h4 {
+      color: #8000FF;
+      padding: .375rem 0rem; }
+    .index-about-section .item3 p {
+      padding: .375rem none;
+      font-size: 1rem;
+      line-height: 2rem;
+      letter-spacing: .0313rem; }
 
-
-.index-about-section div{
-    padding: 1.125rem 1.125rem;
-}
-.index-h2{
-    font-size: 3rem;
-    font-style: normal;
-} 
-
-.index-h2-2{
+.index-projects-section {
+  padding: 3.5rem 7.5rem; }
+  .index-projects-section h2 {
+    padding: 2.1875rem 0rem;
+    font-size: 2rem;
     font-style: italic;
-    font-weight: 400;
-    background-color: #F9D61C /*#8aee83*/;
-    width: fit-content;
-}
-
-.index-about-section h3{
-    color: #8000FF;
-    padding: .375rem 0rem;
-}
-.index-about-section p, .index-testimonial-section p{
-    padding: .375rem none;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
-
-.card-container, .testimony-container{
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif; }
+  .index-projects-section div {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.testimony-container{
-    gap: 0px;
-}
+    justify-content: space-evenly; }
+    .index-projects-section div div {
+      justify-content: left;
+      gap: 0.5rem; }
+      .index-projects-section div div div a {
+        text-decoration: none;
+        background-color: #8000FF;
+        color: white;
+        border: 1px;
+        padding: .375rem .75rem;
+        border-radius: .375rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        vertical-align: middle; }
+        .index-projects-section div div div a:hover {
+          background-color: #5500ab; }
+        .index-projects-section div div div a:active {
+          background-color: #300758; }
 
-.index-projects-section h2, .index-testimonial-section h2, .index-mailing-section h2{
-    padding: 4.375rem 0rem;
-    font-size: 2rem;
-    font-style: normal;
-}
-
-.index-projects-section, .index-testimonial-section, .index-mailing-section{
-    padding: 4.375rem 7.5rem;
-}
-
-.index-testimonial-section{
-    background-color: whitesmoke;
-}
-
-
-.my-button {
-    text-decoration: none;
-    background-color: #8000FF;
-    color: #eeeeee;
-    border: 1px;
-    padding: .375rem .75rem ;
-    border-radius: .375rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.my-button:hover {
-    background-color: #5500ab;
-}
-
-.my-button:active {
-    background-color: #300758;
-}
-
-.index-testimonial-section h2{
+.index-testimonial-section {
+  padding: 3.5rem 7.5rem;
+  background-color: whitesmoke; }
+  .index-testimonial-section h2 {
     padding: 4.375rem 0rem 0rem 0rem;
-}
-.index-testimonial-section p{
-    padding: 1.125rem 0rem 4.375rem 0rem;
-}
-.card-testimony{
-    width: 31.25rem;
-    height: 37.5rem;
-    background-color:#191919;
-    margin: .75rem;
-    border-radius: .75rem;
-    overflow: hidden;
-}
-
-.card-testimony img{
-    margin: .75rem;
-    padding: .75rem;
-    border-radius: .125rem;
-    border-color: white;
-}
-
-.testimony-flex{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif; }
+  .index-testimonial-section p {
+    padding: 1.125rem 0rem 4.375rem 0rem; }
+  .index-testimonial-section div {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 1.5rem .75rem;
-}
+    row-gap: 1.5rem;
+    column-gap: 0rem;
+    justify-content: space-evenly;
+    align-items: flex-start; }
+    .index-testimonial-section div article {
+      width: 31.25rem;
+      height: 25rem;
+      background-color: #191919;
+      margin: .75rem;
+      border-radius: .75rem;
+      overflow: hidden; }
+      .index-testimonial-section div article div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 1.5rem .75rem; }
+        .index-testimonial-section div article div img {
+          margin: .75rem;
+          padding: .75rem;
+          border-radius: .125rem;
+          border-color: white;
+          height: 100%;
+          width: 5.625rem; }
+        .index-testimonial-section div article div div {
+          flex-direction: column;
+          align-self: center;
+          gap: 0rem;
+          align-content: left; }
+          .index-testimonial-section div article div div h3 {
+            color: white;
+            font-size: 1.5rem; }
+          .index-testimonial-section div article div div p {
+            padding: 0rem; }
+      .index-testimonial-section div article p {
+        font-size: 1rem;
+        letter-spacing: .0313rem;
+        padding: 0rem 2rem 1.5rem 2rem;
+        color: white; }
 
-.testimony-flex div{
-    align-self: center;
-}
-
-.testimony-flex div p{
-    padding: 0rem;
-}
-
-.card-testimony div h3{
-    color: white;
-    font-size: 1.5rem;
-}
-
-.card-testimony p{
-    font-size: 1rem;
-    letter-spacing: .0313rem;
-    padding: 0rem 3rem 1.5rem 3rem;
-    color: white;
-}
-.mailing-background{
-    background-color: whitesmoke;
-}
-.index-mailing-section {
+.mailing-background {
+  background-color: whitesmoke; }
+  .mailing-background div {
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
@@ -231,530 +207,526 @@ INDEX
     margin: 0rem 7.5rem 0rem 7.5rem;
     padding: 2rem;
     border-radius: 1.5rem 1.5rem 0rem 0rem;
-    grid-template-areas: 
-    "h2-grid email"
-    "p-grid mailing-button";
-}
-
-.index-mailing-section h2{
-    grid-area: h2-grid;
-    padding: 1rem 1.25rem 0rem 1.25rem;
-    font-style: normal;
-}
-
-.index-mailing-section p{
-    grid-area: p-grid;
-    padding: 0rem 1.25rem 1rem 1.25rem;
-    font-size: 1.125rem;
-    letter-spacing: .0313rem;
-}
-
-.index-mailing-section input{
-    grid-area: email;
-    margin: 0rem 1.5rem;
-    border-radius: 12px;
-    padding: .375rem .75rem;
-    width: 25rem;
-    border-width: .0625rem;
-    color: #8e8e8e;
-    font-size: .875rem;
-}
-
-.index-mailing-section button{
-    grid-area: mailing-button;
-    margin: 0rem 1.5rem;
-    width: 15.625rem;
-    height: 3.125rem;
-    background-color: #8000FF;
-    border-radius: 12px;
-    padding: .375rem .75rem;
-    border-width: 0rem;
-    color: white;
-    font-weight: 600;
-    font-size: 1.125rem;
-}
-/**** FOOTER ****/
+    grid-template-areas: "h2-grid email" "p-grid mailing-button"; }
+    .mailing-background div h2 {
+      grid-area: h2-grid;
+      padding: 1rem 1.25rem 0rem 1.25rem;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 700;
+      font-family: "IBM Plex Sans Condensed", sans-serif; }
+    .mailing-background div p {
+      grid-area: p-grid;
+      padding: 0rem 1.25rem 1rem 1.25rem;
+      font-size: 1.125rem;
+      letter-spacing: .0313rem; }
+    .mailing-background div input {
+      grid-area: email;
+      margin: .75rem 1.5rem;
+      border-radius: 12px;
+      padding: .375rem .75rem;
+      width: 25rem;
+      height: 2.75rem;
+      border-width: .0625rem;
+      color: #8e8e8e;
+      font-size: 1rem;
+      font-size: .875rem; }
+    .mailing-background div button {
+      grid-area: mailing-button;
+      margin: 0rem 1.5rem;
+      width: 15.625rem;
+      height: 3.125rem;
+      background-color: #8000FF;
+      border-radius: 12px;
+      padding: .375rem .75rem;
+      border-width: 0rem;
+      color: white;
+      font-weight: 600;
+      font-size: 1.125rem; }
 
 footer {
-    background-color: #191919;
-    height: 15rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    align-items: top;
-    padding: 3rem 6.25rem;
-    grid-area:
-    "logo-footer nav-footer footer-social";
-}
-
-.logo-footer img{
-    height: 5.375rem;
-    width: auto;
-}
-
-footer nav ul{
-    list-style: none;
-}
-
-footer nav ul li a {
-    display: block;
-    color: #eeeeee;
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-weight: 400;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    text-transform: uppercase;
-    padding: .5rem .75rem;
-    }
-
-footer div{
-    padding: 1.5rem;
-}
-
-footer div p{
+  background-color: #191919;
+  height: 15rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  align-items: top;
+  padding: 3rem 6.25rem;
+  grid-area: "logo-footer nav-footer footer-social"; }
+  footer a {
+    text-decoration: none; }
+    footer a img {
+      height: 3.375rem;
+      width: auto; }
+  footer nav ul {
+    list-style: none; }
+    footer nav ul li a {
+      display: block;
+      color: #eeeeee;
+      font-size: 1.125rem;
+      font-weight: 400;
+      font-family: 'IBM Plex Sans Condensed', sans-serif;
+      text-transform: uppercase;
+      padding: .5rem .75rem; }
+  footer span p {
     font-size: 1.125rem;
     color: white;
     font-weight: 600;
     letter-spacing: .0625rem;
-    padding: 0rem 0rem .75rem 0rem;
-}
+    padding: 0rem 0rem .75rem 0rem; }
+  footer span a {
+    padding-left: .375rem; }
+    footer span a img {
+      width: 2.25rem;
+      height: auto; }
 
-footer div a img{
-    width: 36px;
-    height: auto;
-}
+.about-principal {
+  padding: 2.1875rem 7.5rem; }
+  .about-principal div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 2rem; }
+    .about-principal div div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center; }
+    .about-principal div h1, .about-principal div .article-principal h2, .article-principal .about-principal div h2 {
+      font-size: 2.875rem;
+      font-style: italic;
+      font-weight: 700;
+      font-family: "IBM Plex Sans Condensed", sans-serif;
+      background-color: #8aee83;
+      width: fit-content; }
+    .about-principal div p {
+      font-size: 1rem;
+      line-height: 2rem;
+      letter-spacing: .0313rem; }
+    .about-principal div img {
+      padding: 1.5rem;
+      height: 37.5rem;
+      object-fit: cover;
+      width: 50%; }
+  .about-principal h2 {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    background-color: transparent !important; }
 
-/****************************
-ABOUT
-****************************/
+.about-mywork {
+  background-color: whitesmoke;
+  padding: 2.1875rem 7.5rem; }
+  .about-mywork h2 {
+    padding: 2.1875rem 0rem;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif; }
+  .about-mywork div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly; }
+    .about-mywork div div {
+      justify-content: left;
+      gap: 0.5rem; }
+      .about-mywork div div div a {
+        text-decoration: none;
+        background-color: #8000FF;
+        color: white;
+        border: 1px;
+        padding: .375rem .75rem;
+        border-radius: .375rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        vertical-align: middle; }
+        .about-mywork div div div a:hover {
+          background-color: #5500ab; }
+        .about-mywork div div div a:active {
+          background-color: #300758; }
 
-.about-principal h1, .about-principal h2, .about-mywork h2{
-    margin: 1.5rem 6.25rem;
-    padding: 1.125rem 7.5rem;
-    font-size: 1.5rem;
-    font-style: normal;
-}
-
-.about-principal p{
-    margin: 1.5rem 6.25rem;
-    padding: .25rem 1.25rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
-
-.about-mywork{
-    background-color: whitesmoke;
-
-}
-
-.about-principal img{
-    margin: 1.125rem 6.25rem;
-    padding: 1.5rem;
-    height: 37.5rem;
-    width: auto;
-}
-
-.about-card{
-    width: 31.25rem;
-    height: 26.875rem;
-    background-color: #191919;
-    margin: 1.125rem 6.25rem;
-    border-radius: .75rem;
-    overflow: hidden;
-}
-
-.about-card div {
-    width: 100%;
-    height: 15.625rem;
-}
-
-.about-card div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-card h3{
-    padding: 1.5rem 1.5rem .375rem 1.5rem;
-    letter-spacing: .0313rem;
-    color: white;
-}
-
-.about-card p{
-    padding: 0rem 1.5rem 1.5rem 1.5rem;
-    color: white;
-    font-size: .875rem;
-    letter-spacing: .0313rem;
-}
-
-.about-card button{
-    float: right;
-    margin: 0rem 1.5rem;
-    background-color: #8000FF;
-    border-radius: 12px;
-    padding: .5rem .75rem;
-    border-width: 0rem;
-    color: white;
-    font-weight: 600;
-    font-size: .875rem;
-}
-
-/****************************
-WORK & PLAY
-****************************/
-.work-principal{
-    margin-top: 5.625rem;
-    padding: 1.5rem 7.5rem;
-}
-.work-principal div h1{
-    padding: 1.5rem 0rem;
-    font-size: 1.5rem;
-    font-style: normal;
-}
-
-.description-txt{
-    padding: .25rem .5rem 2rem .5rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
-
-.play-principal h2, .work-principal h2{
-    padding: 1.5rem 0rem;
-    font-size: 1.5rem;
-    font-style: normal;
-}
-
-.play-principal p{
-    padding-bottom: 2rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
+.work-principal {
+  padding: 9.375rem 7.5rem 3.5rem 7.5rem; }
+  .work-principal .work-text {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem; }
+    .work-principal .work-text h1, .work-principal .work-text .article-principal h2, .article-principal .work-principal .work-text h2 {
+      font-size: 2.875rem;
+      font-style: italic;
+      font-weight: 700;
+      font-family: "IBM Plex Sans Condensed", sans-serif; }
+    .work-principal .work-text p {
+      margin-bottom: 2rem; }
+  .work-principal div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-evenly; }
+    .work-principal div div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-evenly; }
+      .work-principal div div div {
+        justify-content: left;
+        gap: 0.5rem; }
+        .work-principal div div div a {
+          text-decoration: none;
+          background-color: #8000FF;
+          color: white;
+          border: 1px;
+          padding: .375rem .75rem;
+          border-radius: .375rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: center;
+          vertical-align: middle; }
+          .work-principal div div div a:hover {
+            background-color: #5500ab; }
+          .work-principal div div div a:active {
+            background-color: #300758; }
 
 .play-principal {
-    background-color: whitesmoke;
-    padding: 1.5rem 7.5rem;
-}
-.gallery-container{
+  padding: 3.5rem 7.5rem 3.5rem 7.5rem;
+  background-color: whitesmoke;
+  gap: .375rem; }
+  .play-principal h2 {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif; }
+  .play-principal p {
+    font-size: 1rem;
+    margin-bottom: 2rem; }
+  .play-principal .gallery-container {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 1.5rem;
-    grid-template-areas: 
-    "play-img-1 play-img-3"
-    "play-img-2 play-img-3";
-}
-.play-img-1 {
-    grid-area: play-img-1;
-}
-.play-img-2 {
-    grid-area: play-img-2;
-}
-.play-img-3 {
-    grid-area: play-img-3;
-}
-.play-img-1 img, .play-img-2 img, .play-img-3 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    grid-template-areas: "img-1 img-3" "img-2 img-3"; }
+    .play-principal .gallery-container .img-1, .play-principal .gallery-container .img-2, .play-principal .gallery-container .img-3 {
+      grid-area: img-1; }
+      .play-principal .gallery-container .img-1 img, .play-principal .gallery-container .img-2 img, .play-principal .gallery-container .img-3 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px; }
+    .play-principal .gallery-container .img-2 {
+      grid-area: img-2 !important; }
+    .play-principal .gallery-container .img-3 {
+      grid-area: img-3; }
+
+.contact-principal {
+  background-color: #d5b2ff;
+  padding: 7.5rem 7.5rem 7.5rem 7.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center; }
+  .contact-principal div {
+    padding-right: 2rem;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .contact-principal div h1, .contact-principal div .article-principal h2, .article-principal .contact-principal div h2 {
+      font-size: 2.875rem;
+      font-style: italic;
+      font-weight: 700;
+      font-family: "IBM Plex Sans Condensed", sans-serif;
+      width: fit-content;
+      color: #8000FF; }
+    .contact-principal div p {
+      margin-bottom: 2rem; }
+  .contact-principal .container-contact {
+    background-color: white;
     border-radius: 12px;
-}
-
-/****************************
-CONTACT
-****************************/
-
-.contact-principal h1{
-    margin: 1.5rem 6.25rem;
-    padding: 1.125rem 7.5rem;
-    font-size: 1.5rem;
-    font-style: normal;
-}
-
-.contact-principal p{
-    margin: 1.5rem 6.25rem;
-    padding: 1.25rem 7.25rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
-
-.contact-principal div{
-    margin: 1.5rem 6.25rem;
     padding: 1.5rem;
-    background-color: #4db645;
-    width: 18.75rem;
-    height: 21.875rem;
-    align-content: center;
-    border-radius: .75rem;
-}
+    gap: .5rem;
+    align-items: flex-start;
+    width: auto;
+    box-shadow: 2px 17px 49px -8px rgba(128, 0, 255, 0.52); }
+    .contact-principal .container-contact label {
+      font-size: .75rem; }
+    .contact-principal .container-contact input {
+      border-radius: 12px;
+      padding: .375rem .75rem;
+      width: 25rem;
+      height: 2.75rem;
+      border-width: .0625rem;
+      color: #8e8e8e;
+      font-size: 1rem; }
+    .contact-principal .container-contact button {
+      margin-top: .75rem;
+      padding: .75rem 1.5rem;
+      width: 15.625rem;
+      height: 3.125rem;
+      background-color: #8000FF;
+      border-radius: 12px;
+      padding: .375rem .75rem;
+      border-width: 0rem;
+      color: white;
+      font-weight: 600;
+      font-size: 1.125rem; }
 
-.contact-principal div label{
-    padding: .75rem 0rem .75rem 0rem;
-    font-size: .875rem;
-    width: 25rem;
-    font-size: .875rem;
-}
-
-.contact-principal div input{
-    padding: .375rem;
-    color: #8e8e8e;
-    width: 250px;
-    border: solid;
-    border-color: #267521;
-    border-radius: .75rem;
-}
-
-.contact-principal div button{
-    float: right;
-    margin: 0rem 1.5rem;
-    background-color: #8000FF;
-    border-radius: 12px;
-    padding: .5rem .75rem;
-    border-width: 0rem;
-    color: white;
-    font-weight: 600;
-    font-size: .875rem;
-}
-
-/****************************
-ARTICLES
-****************************/
-
-.article-title{
-    background-image: url("../assets/img/banner_hero.jpg");
-    height: 21.875rem;
-    width: 100%;
-    background-size: cover;
-}
-
-.article-title h1{
-    padding: 9.5rem 7.5rem;
-    font-size: 3rem;
-    font-style: normal;
-    text-align: right;
-}
-
-.article-principal .article-title{
-    margin: 0rem;
-    padding: 0rem;
-}
-
-.article-principal h2{
-    margin: 1.5rem 6.25rem;
-    padding: .75rem 7.5rem;
-    font-size: 1.5rem;
-    font-style: normal;
-}
-
-.article-principal h3{
-    margin: .75rem;
-    padding: 1.5rem;
-    color: #8000FF;
-    font-weight: 600;
-    font-size: 2.25rem;
-    line-height: 3rem;
+.article-principal {
+  padding: 7.5rem 7.5rem 7.5rem 7.5rem; }
+  .article-principal h1, .article-principal h2 {
+    font-size: 2.875rem;
     font-style: italic;
-}
-
-.article-principal p{
-    margin: 1.5rem 6.25rem;
-    padding: 1.25rem 7.25rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    letter-spacing: .0313rem;
-}
-
-.article-principal div{
-    margin: 1.5rem 6.25rem;
-    padding: .75rem 7.5rem;
-}
-
-.article-principal div img{
-    width: 50%;
-    height: 25rem;
-    object-fit: cover;
-    border-radius: .75rem;
-}
-
-.article-principal div p{
-    margin: .375rem 0rem .375rem 0rem;
-    padding: 0rem;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .0313rem;
-}
-
-.article-mywork{
-    background-color: whitesmoke;
-    padding: 1.5rem 0rem;
-}
-.article-mywork h2{
-    margin: 1.5rem 6.25rem;
-    padding: .75rem 7.5rem;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    text-align: right; }
+  .article-principal h2 {
     font-size: 1.5rem;
-    font-style: normal;
-}
+    font-weight: 300;
+    text-align: left !important; }
+  .article-principal .example-img {
+    padding: 1.5rem 0rem;
+    display: flex;
+    flex-direction: row; }
+    .article-principal .example-img div {
+      width: 50%; }
+  .article-principal h3 {
+    margin: 2rem 0rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    background-color: #F9D61C;
+    width: fit-content; }
+  .article-principal .img-hori {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 1.5rem 0rem; }
 
-/****************************
-MEDIA QUERY
-****************************/
+@media (max-width: 916px) {
+  .mailing-background div {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1;
+    row-gap: .75rem;
+    margin: 0rem;
+    padding: 2.875rem 1.875rem;
+    grid-template-areas: "h2-grid" "p-grid" "email" "mailing-button"; }
+  .mailing-background input {
+    margin: 0rem;
+    padding: 1.5rem;
+    width: 25rem;
+    border-width: .0625rem;
+    color: #8e8e8e;
+    font-size: .875rem; }
+  .mailing-background button {
+    margin: 0rem; }
+  .mailing-background p {
+    padding: 0rem 0rem 1rem 0rem; } }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
+  .index-about-section {
+    padding: 2.875rem 1.875rem; }
+  .index-projects-section {
+    padding: 2.875rem 1.875rem; }
+  .index-testimonial-section {
+    padding: 2.875rem 1.875rem; }
+    .index-testimonial-section div article {
+      height: fit-content; }
+  .mailing-background div {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1;
+    row-gap: .75rem;
+    margin: 0rem;
+    padding: 2.875rem 1.875rem;
+    grid-template-areas: "h2-grid" "p-grid" "email" "mailing-button"; }
+  .mailing-background input {
+    margin: 0rem;
+    padding: 1.5rem;
+    width: 25rem;
+    border-width: .0625rem;
+    color: #8e8e8e;
+    font-size: .875rem; }
+  .mailing-background button {
+    margin: 0rem; }
+  .mailing-background p {
+    padding: 0rem 0rem 1rem 0rem; }
+  .work-principal {
+    padding: 7rem 1.875rem 2.875rem 1.875rem; }
+    .work-principal .work-text h1, .work-principal .work-text .article-principal h2, .article-principal .work-principal .work-text h2 {
+      font-size: 2.25rem; }
+  .play-principal {
+    padding: 2.875rem 1.875rem; }
+    .play-principal h2 {
+      font-size: 2.25rem; }
+  .about-principal {
+    padding: 7rem 1.875rem 2.875rem 1.875rem; }
+    .about-principal div div h1, .about-principal div div .article-principal h2, .article-principal .about-principal div div h2 {
+      font-size: 2.25rem; }
+    .about-principal div div h2 {
+      font-size: 2.25rem; }
+    .about-principal div img {
+      padding-right: 0rem;
+      height: fit-content; }
+  .about-mywork {
+    padding: 2.875rem 1.875rem; }
+  .contact-principal {
+    padding: 7rem 1.875rem 2.875rem 1.875rem;
+    justify-content: center; }
+    .contact-principal div {
+      width: 100%; }
+      .contact-principal div h1, .contact-principal div .article-principal h2, .article-principal .contact-principal div h2 {
+        font-size: 2.25rem; }
+  .container-contact {
+    align-items: center; }
+  .article-principal {
+    padding: 7rem 1.875rem 2.875rem 1.875rem; }
+    .article-principal div h1, .article-principal div h2 {
+      font-size: 2.25rem; }
+    .article-principal .example-img {
+      flex-wrap: wrap; }
+      .article-principal .example-img div {
+        width: 100%; }
+        .article-principal .example-img div img {
+          width: 100%;
+          height: auto;
+          object-fit: cover; }
+  footer {
+    padding: 2.875rem 1.875rem;
+    height: fit-content;
+    grid-template-columns: repeat(2, auto); }
+    footer span p {
+      font-size: 14px; }
+    footer span a img {
+      width: 2.5rem; } }
 
-    /* HOME */
+@media (max-width: 425px) {
+  .index-header-section {
+    padding: 1.5rem 1.875rem;
+    height: 31.25rem; }
+    .index-header-section h1, .index-header-section .article-principal h2, .article-principal .index-header-section h2 {
+      margin-top: 4.25rem;
+      font-size: 3.5rem; }
+  .index-about-section {
+    padding: 1.5rem 1.875rem;
+    row-gap: 0rem;
+    grid-template-areas: "item1"  "item2" "item3"; }
+    .index-about-section img {
+      width: auto;
+      max-height: 9.375rem; }
+  .index-testimonial-section div article div {
+    row-gap: 0rem;
+    padding-bottom: 0rem; }
+  .index-testimonial-section div article p {
+    padding: 0rem .75rem  .75rem 1.5rem; }
+  .mailing-background div {
+    padding: 2.25rem 1.875rem 1.5rem 1.875rem; }
+    .mailing-background div h2 {
+      padding: 0rem; }
+    .mailing-background div p {
+      padding: 0rem;
+      font-size: 1rem; }
+    .mailing-background div input {
+      margin: 0rem;
+      width: 100%; }
+    .mailing-background div button {
+      margin: 0rem;
+      width: 100%; }
+  .about-principal div div {
+    flex-direction: column;
+    width: 100%; }
+  .about-principal div img {
+    width: 100%;
+    padding: 0rem;
+    margin-bottom: 1rem; }
+  .contact-principal div {
+    padding-right: 0rem; }
+  .contact-principal .container-contact {
+    width: 23.75rem !important; }
+    .contact-principal .container-contact label {
+      width: 20.75rem; }
+    .contact-principal .container-contact input {
+      width: 20.75rem; }
+    .contact-principal .container-contact button {
+      width: 20.75rem; }
+  .play-principal .gallery-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.5rem; } }
 
-    .index-header-section{
-        padding: 2.1875rem 3.75rem;
-        height: 31.25rem; 
-    }
-    .index-about-section {
-        padding: 2.1875rem 3.75rem;
-        height: auto;
-        column-gap: 0rem;
-        grid-template-areas: 
-        "item1 item2 item2"
-        "item3 item3 item3";
-    }
-    .item1{
-        width: 100%;
-    }
-    .index-projects-section, .index-testimonial-section, .index-mailing-section{
-        padding: 2.1875rem 3.75rem;
-    }
-    .index-projects-section h2, .index-testimonial-section h2, .index-mailing-section h2{
-        padding: 2.1875rem 0rem .375rem 0rem;
-    }
-    .card-container{
-        padding: 0rem;
-    }
-    .index-mailing-section {
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: 1;
-        row-gap: .75rem;
-        margin: 0rem;
-        padding: 2.1875rem 3.75rem;
-        grid-template-areas: 
-        "h2-grid"
-        "p-grid"
-        "email"
-        "mailing-button";
-    }
-    .index-mailing-section input{
-        margin: 0rem;
-        padding: 1.5rem;
-        width: 25rem;
-        border-width: .0625rem;
-        color: #8e8e8e;
+@media (max-width: 325px) {
+  .index-header-section {
+    height: 28.125rem; }
+    .index-header-section h1, .index-header-section .article-principal h2, .article-principal .index-header-section h2 {
+      font-size: 2.5rem; }
+  .index-about-section img {
+    width: 6.25rem; }
+  .index-about-section .item2 h2 {
+    font-size: 2rem; }
+  .index-about-section .item2 h3 {
+    font-size: 1.125rem; }
+  .index-about-section .item3 p {
+    font-size: .875rem; }
+  .index-about-section .item3 h4 {
+    font-size: 1.125rem; }
+  .index-projects-section h2 {
+    font-size: 1.5rem; }
+  .index-testimonial-section p {
+    font-size: .875rem; }
+  .index-testimonial-section div article {
+    margin: 0rem; }
+    .index-testimonial-section div article div {
+      row-gap: 0rem; }
+      .index-testimonial-section div article div img {
+        margin: 0rem; }
+      .index-testimonial-section div article div div {
+        padding: 0rem; }
+    .index-testimonial-section div article p {
+      padding: 0rem 1.25rem 1.5rem 1.25rem; }
+  .work-principal .work-text h1, .work-principal .work-text .article-principal h2, .article-principal .work-principal .work-text h2 {
+    font-size: 1.5rem; }
+  .work-principal .work-text p {
+    font-size: .875rem; }
+  .play-principal h2 {
+    font-size: 1.5rem; }
+  .play-principal p {
+    font-size: .875rem; }
+  .about-mywork h2 {
+    font-size: 1.5rem; }
+  .article-principal {
+    padding: 7rem 1.25rem 2.875rem 1.25rem; }
+    .article-principal p {
+      font-size: .875rem; }
+    .article-principal div h1, .article-principal div h2 {
+      font-size: 1.5rem;
+      margin-bottom: 3rem; }
+  .about-principal div div h1, .about-principal div div .article-principal h2, .article-principal .about-principal div div h2 {
+    font-size: 1.5rem; }
+  .about-principal div div p {
+    font-size: .875rem;
+    line-height: 1.5rem; }
+  .about-principal div h2 {
+    font-size: 1.5rem !important; }
+  .about-principal div p {
+    font-size: .875rem;
+    line-height: 1.5rem; }
+  .contact-principal {
+    padding: 7rem 1.25rem 2.875rem 1.25rem; }
+    .contact-principal div h1, .contact-principal div .article-principal h2, .article-principal .contact-principal div h2 {
+      font-size: 1.5rem; }
+    .contact-principal p {
+      font-size: .875rem; }
+    .contact-principal .container-contact {
+      width: 17.75rem !important; }
+      .contact-principal .container-contact label {
+        width: 14.75rem; }
+      .contact-principal .container-contact input {
         font-size: .875rem;
-    }
-    .index-mailing-section button{
-        margin: 0rem;
-    }
-    .index-mailing-section p {
-        padding: 0rem 0rem 1rem 0rem;
-    }
-    footer {
-        height: fit-content;
-        grid-template-columns: repeat(2, auto);
-    }
-    /* WORK & PLAY */
-
-    .work-principal, .play-principal{
-        padding: 2.1875rem 3.75rem;
-    }
-
-}
-
-@media (max-width:425px){
-
-        /* HOME */
-
-    .index-header-section h1{
-        font-size: 3.5rem;
-    }
-    .index-header-section{
-        padding: 1.5rem 1.875rem;
-    }
-    .index-about-section {
-        padding: 1.5rem 1.875rem;
-        row-gap: 0rem;
-        grid-template-areas: 
-        "item1" 
-        "item2"
-        "item3";
-    }
-    .item1{
-        width: auto;
-        max-height: 12.5rem;
-    }
-    .index-projects-section, .index-testimonial-section, .index-mailing-section{
-        padding: 1.5rem 1.875rem;
-    }
-    .card-testimony p{
-        padding: 1rem 1rem 1.5rem 1rem;
-    }
-    .card-testimony img{
-        margin: 0rem;
-    }
-    .index-mailing-section h2{
-        padding: .75rem 0rem;
-    }
-    .index-mailing-section {
-        grid-template-rows: repeat(4, auto);
-        row-gap: .75rem;
-        margin: 0rem;
-        padding: 1.5rem 1.875rem;
-    }
-    .index-mailing-section button{
-        width: 100%;
-    }
-    .index-mailing-section input{
-        grid-area: email;
-        padding: 1.5rem;
-        width: 100%;
-        border-width: .0625rem;
-        color: #8e8e8e;
-        font-size: .875rem;
-    }
-    footer {
-        padding: 1.5rem 1.875rem;
-        row-gap: .75rem;
-    }
-    .logo-footer img{
-        height: 3.75rem;
-        width: auto;
-    }
-    .footer-social{
-        padding: 0rem;
-    }
-    
-    /* WORK & PLAY */
-
-    .work-principal, .card-container, .play-principal{
-        padding: 1.5rem 1.875rem;
-    }
-
-    .gallery-container{
-        grid-template-areas:
-        "play-img-1"
-        "play-img-2"
-        "play-img-3";
-    }
-
-}
-
-@media (max-width:320px){
-
-        /* HOME */
-
-    .index-header-section h1{
-        font-size: 3rem;
-    }
-    .item1{
-        width: auto;
-        max-height: 9.375rem;
-    }
-}
+        width: 14.75rem; }
+      .contact-principal .container-contact button {
+        font-size: 1rem;
+        width: 14.75rem; } }

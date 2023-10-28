@@ -1,0 +1,52 @@
+.contact-principal{
+    background-color: map-get($color , _light_violet );
+    padding: 7.5rem 7.5rem 7.5rem 7.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    div{
+        padding-right: 2rem;
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        h1{
+            @include h1(2.875rem,italic,700);
+            font-family: $ffamily;
+            width: fit-content;
+            color: map-get($color , _violet );
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+    .container-contact{
+        background-color: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        gap: .5rem;
+        align-items: flex-start;
+        width: auto;
+        box-shadow: 2px 17px 49px -8px rgba(128,0,255,0.52);
+        label{
+            font-size: .75rem;
+        }
+        input{
+            @include input;
+            }
+        button{
+            margin-top: .75rem;
+            padding: .75rem 1.5rem;
+            width: 15.625rem;
+            height: 3.125rem;
+            background-color: map-get($color , _violet );
+            border-radius: 12px;
+            padding: .375rem .75rem;
+            border-width: 0rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+            }
+    }
+}

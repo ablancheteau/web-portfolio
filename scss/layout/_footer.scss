@@ -1,0 +1,51 @@
+footer{
+    background-color: #191919;
+    height: 15rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: top;
+    padding: 3rem 6.25rem;
+    grid-area:
+    "logo-footer nav-footer footer-social";
+    a{
+        text-decoration: none;
+        img{
+            height: 3.375rem;
+            width: auto;
+        }
+    }
+    nav{
+        ul{
+            list-style: none;
+            li{
+                a{
+                    display: block;
+                    color: #eeeeee;
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    font-family: 'IBM Plex Sans Condensed', sans-serif;
+                    text-transform: uppercase;
+                    padding: .5rem .75rem;
+                }
+            }
+        }
+    }
+    span{
+        p{
+            font-size: 1.125rem;
+            color: white;
+            font-weight: 600;
+            letter-spacing: .0625rem;
+            padding: 0rem 0rem .75rem 0rem;
+        }
+        a{
+            padding-left: .375rem;
+            img{
+            width: 2.25rem;
+            height: auto;
+            }
+        }
+    }    
+}

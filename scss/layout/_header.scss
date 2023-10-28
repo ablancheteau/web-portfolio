@@ -1,0 +1,45 @@
+.index-header-section{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 43.75rem;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    background-size: cover;
+    h1{
+    @include h1(4rem,italic,700);
+    font-family: $ffamily;
+    align-self: center;
+    justify-self: center;
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    background: linear-gradient(-45deg, map-get($color, _pink), map-get($color, _violet), map-get($color,_green ), map-get($color, _orange));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    @keyframes tracking-in-contract {
+        0% {
+        letter-spacing: 1em;
+        opacity: 0;
+        }
+        40% {
+        opacity: 0.6;
+        }
+        100% {
+        letter-spacing: normal;
+        opacity: 1;
+        }
+    }    
+}

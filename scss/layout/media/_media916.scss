@@ -1,0 +1,30 @@
+@media (max-width:916px){
+    .mailing-background{
+        div{
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: 1;
+            row-gap: .75rem;
+            margin: 0rem;
+            padding: 2.875rem 1.875rem;
+            grid-template-areas: 
+            "h2-grid"
+            "p-grid"
+            "email"
+            "mailing-button";
+        }
+        input{
+            margin: 0rem;
+            padding: 1.5rem;
+            width: 25rem;
+            border-width: .0625rem;
+            color: #8e8e8e;
+            font-size: .875rem;
+        }
+        button{
+            margin: 0rem;
+        }
+        p{
+            padding: 0rem 0rem 1rem 0rem;
+        }
+    }
+}

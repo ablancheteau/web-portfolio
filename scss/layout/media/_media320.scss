@@ -1,0 +1,136 @@
+@media (max-width:325px){
+    .index-header-section{
+        height: 28.125rem;
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .index-about-section{
+        img{
+            width: 6.25rem;
+        }
+        .item2{
+            h2{
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 1.125rem;
+            }
+        }
+        .item3{
+            p{
+                font-size: .875rem;
+            }
+            h4{
+                font-size: 1.125rem;
+            }
+        }
+    }
+    .index-projects-section{
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    .index-testimonial-section{
+        p{
+            font-size: .875rem;
+        }
+        div{
+            article{
+                margin: 0rem;
+                div{
+                    row-gap: 0rem;
+                    img{
+                        margin: 0rem;
+                    }
+                    div{
+                        padding: 0rem;
+                    }
+                }
+                p{
+                    padding: 0rem 1.25rem 1.5rem 1.25rem;
+                }
+            }
+        }
+    }
+    .work-principal{
+        .work-text{
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: .875rem;
+            }
+        }
+    }
+    .play-principal{
+        h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: .875rem;
+        }
+    }
+    .about-mywork{
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    .article-principal{
+        padding: 7rem 1.25rem 2.875rem 1.25rem;
+        p{
+            font-size: .875rem;
+        }
+        div{
+            h1{
+                font-size: 1.5rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    .about-principal{
+        div{
+            div{
+                h1{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: .875rem;
+                    line-height: 1.5rem;
+                }
+            }
+            h2{
+                font-size: 1.5rem !important;
+            }
+            p{
+                font-size: .875rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+    .contact-principal{
+        padding: 7rem 1.25rem 2.875rem 1.25rem;
+        div{
+            h1{
+            font-size: 1.5rem;
+            }
+        }
+        p{
+            font-size: .875rem;
+        }
+        .container-contact{
+            width: 17.75rem !important;
+            label{
+                width: 14.75rem;
+            }
+            input{
+                font-size: .875rem;
+                width: 14.75rem;
+            }
+            button{
+                font-size: 1rem;
+                width: 14.75rem;
+            }
+        }
+    }
+}

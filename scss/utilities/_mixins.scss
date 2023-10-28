@@ -1,0 +1,25 @@
+@mixin h1 ($size,$style,$weight) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+}
+@mixin h2 ($size,$style,$weight) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+}
+@mixin h3 ($size,$style,$weight) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+}
+@mixin input{
+        border-radius: 12px;
+        padding: .375rem .75rem;
+        width: 25rem;
+        height: 2.75rem;
+        border-width: .0625rem;
+        color: #8e8e8e;
+        font-size: 1rem;
+        
+}

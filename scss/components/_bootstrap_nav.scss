@@ -1,0 +1,30 @@
+nav{
+    background-color: #191919;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    div{
+        a{
+            img{
+                height: 3rem;
+            }
+        }
+        div{
+            flex-grow: 0;
+            ul{
+                row-gap: 1.5rem;
+            }
+        }
+        .header-social{
+        display:flex;
+        justify-content: left;
+        align-content: center;
+        gap: .75rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: #eeeeee;
+        font-size: .875rem;
+        img{
+            height: 2rem ;
+        }
+        }
+    }
+}

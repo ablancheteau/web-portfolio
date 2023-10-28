@@ -1,0 +1,194 @@
+.index-about-section {
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    row-gap: 1.125rem;
+    column-gap: 1.75rem;
+    background-color: whitesmoke;
+    align-self: flex-start;
+    padding: 3.5rem 7.5rem;
+    height: auto;
+    grid-template-areas: 
+    "item1 item2 item2"
+    "item1 item3 item3";
+    img{
+    grid-area: item1;
+    max-height: 12.5rem;
+    background: radial-gradient(#bb78ff,map-get($color, _violet));
+    border-radius: 50%;
+    align-self: flex-start;
+    }
+    .item2{
+        grid-area: item2;
+        h2{ 
+            @include h2(3rem,italic,700);   
+            font-family: $ffamily;
+        }
+        h3{
+        @include h3(1.75rem,italic,400);
+        background-color: map-get($color, _yellow);
+        width: fit-content;
+        }
+    }
+    .item3{
+        grid-area: item3;
+        align-self: flex-start;
+        h4{
+            color: map-get($color, _violet);
+            padding: .375rem 0rem;
+        }
+        p{
+            padding: .375rem none;
+            font-size: 1rem;
+            line-height: 2rem;
+            letter-spacing: .0313rem;
+        }
+    }
+}
+.index-projects-section{
+    padding: 3.5rem 7.5rem;
+    h2{
+        padding: 2.1875rem 0rem;
+        @include h2(2rem, italic, 700);
+        font-family: $ffamily;
+    }
+    div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    div{
+        justify-content: left;
+        gap: 0.5rem;
+        div{
+            a{
+            text-decoration: none;
+            background-color: map-get($color, _violet);
+            color: white;
+            border: 1px;
+            padding: .375rem .75rem ;
+            border-radius: .375rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            vertical-align: middle;
+            &:hover{
+                background-color: #5500ab;
+                    }
+            &:active{
+                background-color: #300758;
+            }
+                }
+            }
+        }
+    }
+}
+.index-testimonial-section{
+    padding: 3.5rem 7.5rem;
+    background-color: whitesmoke;
+    h2{
+        padding: 4.375rem 0rem 0rem 0rem;
+        @include h2(2rem, italic, 700);
+        font-family: $ffamily;
+    }
+    p{
+        padding: 1.125rem 0rem 4.375rem 0rem;
+    }
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        column-gap: 0rem;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        article{
+            width: 31.25rem;
+            height: 25rem;
+            background-color:map-get($color, _black);
+            margin: .75rem;
+            border-radius: .75rem;
+            overflow: hidden;
+            div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 1.5rem .75rem;
+                img{
+                    margin: .75rem;
+                    padding: .75rem;
+                    border-radius: .125rem;
+                    border-color: white;
+                    height: 100%;
+                    width: 5.625rem;
+                }
+                div{
+                    flex-direction: column;
+                    align-self: center;
+                    gap: 0rem;
+                    align-content: left;
+                    h3{
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        padding: 0rem;
+                    }
+                }
+            }
+            p{
+                font-size: 1rem;
+                letter-spacing: .0313rem;
+                padding: 0rem 2rem 1.5rem 2rem;
+                color: white;
+            }
+        }
+    }
+}
+.mailing-background{
+    background-color: whitesmoke;
+    div{
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+        row-gap: .75rem;
+        background-color: map-get($color, _light_violet );
+        margin: 0rem 7.5rem 0rem 7.5rem;
+        padding: 2rem;
+        border-radius: 1.5rem 1.5rem 0rem 0rem;
+        grid-template-areas: 
+        "h2-grid email"
+        "p-grid mailing-button";
+        h2{
+            grid-area: h2-grid;
+            padding: 1rem 1.25rem 0rem 1.25rem;
+            @include h2(2rem, italic, 700);
+            font-family: $ffamily;
+        }
+        p{
+            grid-area: p-grid;
+            padding: 0rem 1.25rem 1rem 1.25rem;
+            font-size: 1.125rem;
+            letter-spacing: .0313rem;
+        }
+        input{
+        grid-area: email;
+        margin: .75rem 1.5rem;
+        @include input;
+        font-size: .875rem;
+        }
+        button{
+            grid-area: mailing-button;
+            margin: 0rem 1.5rem;
+            width: 15.625rem;
+            height: 3.125rem;
+            background-color: map-get($color, _violet);
+            border-radius: 12px;
+            padding: .375rem .75rem;
+            border-width: 0rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+}
