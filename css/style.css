@@ -37,7 +37,6 @@ nav {
   overflow: hidden;
   color: white;
   width: 100%;
-  background-size: cover;
   background: linear-gradient(-45deg, #0CB800, #8000FF, #0CB800, #E67903);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite; }
@@ -529,6 +528,8 @@ footer {
     padding: 0rem 0rem 1rem 0rem; } }
 
 @media (max-width: 768px) {
+  .index.header-section h1, .index.header-section .article-principal h2, .article-principal .index.header-section h2 {
+    padding: 0rem 1.25rem; }
   .index-about-section {
     padding: 2.875rem 1.875rem; }
   .index-projects-section {
@@ -604,6 +605,15 @@ footer {
     footer span a img {
       width: 2.5rem; } }
 
+@media (max-width: 550px) {
+  .index-about-section {
+    padding: 1.5rem 1.875rem;
+    row-gap: 0rem;
+    grid-template-areas: "item1"  "item2" "item3"; }
+    .index-about-section img {
+      width: auto;
+      max-height: 9.375rem; } }
+
 @media (max-width: 425px) {
   .index-header-section {
     padding: 1.5rem 1.875rem;
@@ -611,13 +621,6 @@ footer {
     .index-header-section h1, .index-header-section .article-principal h2, .article-principal .index-header-section h2 {
       margin-top: 4.25rem;
       font-size: 3.5rem; }
-  .index-about-section {
-    padding: 1.5rem 1.875rem;
-    row-gap: 0rem;
-    grid-template-areas: "item1"  "item2" "item3"; }
-    .index-about-section img {
-      width: auto;
-      max-height: 9.375rem; }
   .index-testimonial-section div article div {
     row-gap: 0rem;
     padding-bottom: 0rem; }
