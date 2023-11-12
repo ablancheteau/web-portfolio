@@ -28,3 +28,14 @@ nav{
         }
     }
 }
+.card:hover{
+    overflow: hidden;
+    img {
+        scale: 105%;
+        top: 0;
+        transition: all 0.3s;
+      }
+}
+.card-title{
+    font-weight: bold;
+}

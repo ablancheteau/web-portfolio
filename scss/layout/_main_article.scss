@@ -9,27 +9,38 @@
         @extend h1;
         font-size: 1.5rem;
         font-weight: 300;
-        text-align: left !important;
+        text-align: left
     }
     .example-img{
         padding: 1.5rem 0rem;
         display: flex;
         flex-direction: row;
+        gap: .75rem;
         div{
             width: 50%;
+            img{
+                object-fit: fill;
+                width: 100%;
+            }
         }
     }
     h3{
         margin: 2rem 0rem;
         @include h3 (1.5rem, italic, 700);
         font-family: $ffamily;
-        background-color: map-get($color, _yellow);
+        background-color: map-get($color, _light_blue);
         width: fit-content;
+    }
+
+    .thank-you{
+        @extend h2;
+        text-align: center;
     }
     .img-hori{
         width: 100%;
-        height: 150px;
+        height: 100%;
         object-fit: cover;
         margin: 1.5rem 0rem;
     }
+    
 }

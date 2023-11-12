@@ -149,8 +149,7 @@
     background-color: whitesmoke;
     div{
         display: grid;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
         row-gap: .75rem;
         background-color: map-get($color, _light_violet );
         margin: 0rem 7.5rem 0rem 7.5rem;
